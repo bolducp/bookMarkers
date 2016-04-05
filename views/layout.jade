@@ -1,7 +1,30 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+head
+  link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+  link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Satisfy|Marvel')
+  link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+  link(rel="stylesheet", href="/css/style.css")
+  link(rel="stylesheet", href="/bower_components/sweetalert/dist/sweetalert.css")
+  script(src="/bower_components/jquery/dist/jquery.min.js")
+  script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+  script(src="/bower_components/angular/angular.min.js")
+  script(src="/bower_components/angular-ui-router/release/angular-ui-router.min.js")
+  script(src="/bower_components/sweetalert/dist/sweetalert.min.js")
+  script(src="/js/bundle.js")
+  
+body(ng-app="bookMarkers")
+  nav.navbar.navbar-default.navbar-top
+    .container
+      .navbar-header
+        a.navbar-brand(ui-sref='home') Book Markers
+      ul.nav.navbar-nav
+      ul.nav.navbar-nav.navbar-right
+        li#navRegister
+          a(ui-sref='register') Register
+        li#navLogin
+          a(ui-sref='login') Login 
+        li#navLogout
+          form(method="post" action="users/logout")#logoutForm
+            a(onclick="document.getElementById('logoutForm').submit();") Logout
+  block content
+  ui-view 

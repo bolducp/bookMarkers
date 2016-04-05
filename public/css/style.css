@@ -1,8 +1,18 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+  font-family: 'Marvel', sans-serif; }
+  body h1, body h2 {
+    font-family: 'Satisfy', cursive; }
 
-a {
-  color: #00B7FF;
-}
+#navLogout {
+  display: none; }
+
+.navbar {
+  z-index: 10;
+  margin-bottom: 0px; }
+
+.navbar-default .navbar-nav > li > a {
+  color: lightSteelBlue; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer; }

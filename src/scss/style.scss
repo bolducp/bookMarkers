@@ -1,0 +1,23 @@
+body {
+  h1, h2 { font-family: 'Satisfy', cursive;
+  }
+  font-family: 'Marvel', sans-serif;
+}
+
+#navLogout {
+  display: none;
+}
+
+.navbar {
+  z-index: 10;
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: lightSteelBlue;
+  &:hover {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
