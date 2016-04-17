@@ -1,0 +1,11 @@
+body {
+  background-color: MintCream; }
+
+.link:hover {
+  cursor: pointer; }
+
+#navLogin, #navRegister {
+  display: none; }
+
+#navLogout {
+  display: list-item; }

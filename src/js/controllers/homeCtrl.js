@@ -1,4 +1,4 @@
-app.controller("dashCtrl", function($http, $state){
+app.controller("homeCtrl", function($http, $state){
   $http.get("/users/dashboard")
     .then(function(){},
   function(err) {

@@ -6,7 +6,10 @@ app.controller("loginCtrl", function($scope, $http, $state){
       .then(function(data){
         $state.go("dash");
       }, function(err){
-        console.error(err);
+        swal({
+          title: "Must enter valid e-mail password combination.",
+          type: "error"
+        });
       });
     }
 });

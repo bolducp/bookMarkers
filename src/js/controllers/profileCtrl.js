@@ -6,6 +6,6 @@ app.controller("profileCtrl", function($scope, $http, $state){
     },
   function(err) {
     swal("You must be logged in to view the previous page");
-    $state.go("login")
+    $state.go("login");
   });
 });

@@ -1,0 +1,27 @@
+link(rel="stylesheet", href="/css/profile.css")
+.container#profile
+  h1 Your Profile!
+  br
+  img(ng-src="{{user.imageUrl}}", alt="Image not found.")
+  br
+  br
+  p Username: {{ user.username }}
+  p(ng-if="user.blurb") About: {{ user.blurb }}
+  p(ng-if="user.location") Location (zip code): {{ user.location }}
+  
+  div(ng-if="user.favoriteBooks") 
+    p Favorite Books:
+    ul 
+      li(ng-repeat="book in user.favoriteBooks track by $index") {{ book }}
+  
+  div(ng-if="user.dislikedBooks")  
+    p Disliked Books:
+    ul 
+      li(ng-repeat="book in user.dislikedBooks track by $index") {{ book }}
+  
+  div(ng-if="user.receivedSuggestions")  
+    p Received Suggestions:
+    ul 
+      li(ng-repeat="book in user.receivedSuggestions track by $index") {{ book }}
+
+  button(ui-sref="editProfile").btn.btn-info Edit Profile    

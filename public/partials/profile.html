@@ -1,0 +1,27 @@
+
+<link rel="stylesheet" href="/css/profile.css"/>
+<div id="profile" class="container">
+  <h1>Your Profile!</h1><br/><img ng-src="{{user.imageUrl}}" alt="Image not found."/><br/><br/>
+  <p>Username: {{ user.username }}</p>
+  <p ng-if="user.blurb">About: {{ user.blurb }}</p>
+  <p ng-if="user.location">Location (zip code): {{ user.location }}</p>
+  <div ng-if="user.favoriteBooks"> 
+    <p>Favorite Books:</p>
+    <ul> 
+      <li ng-repeat="book in user.favoriteBooks track by $index">{{ book }}</li>
+    </ul>
+  </div>
+  <div ng-if="user.dislikedBooks"> 
+    <p>Disliked Books:</p>
+    <ul> 
+      <li ng-repeat="book in user.dislikedBooks track by $index">{{ book }}</li>
+    </ul>
+  </div>
+  <div ng-if="user.receivedSuggestions"> 
+    <p>Received Suggestions:</p>
+    <ul> 
+      <li ng-repeat="book in user.receivedSuggestions track by $index">{{ book }}</li>
+    </ul>
+  </div>
+  <button ui-sref="editProfile" class="btn btn-info">Edit Profile    </button>
+</div>
