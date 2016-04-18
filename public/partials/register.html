@@ -4,7 +4,7 @@
   <h1 class="text-center">Register<br/></h1>
   <form ng-submit="register()" id="registerForm">
     <div class="form-group">
-      <label for="email">Email address:</label>
+      <label for="email">Email address:<span>{{email}}</span></label>
       <input id="email" ng-model="email" type="email" placeholder="Email" required="required" class="form-control"/>
     </div>
     <div class="form-group">

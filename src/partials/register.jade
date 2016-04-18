@@ -4,8 +4,10 @@ link(rel="stylesheet", href="/css/register.css")
     br
    form(ng-submit="register()")#registerForm
      .form-group
-       label(for='email') Email address:
-       input#email.form-control(ng-model="email", type='email', placeholder='Email', required)
+      label(for='email')
+        | Email address:
+        span {{email}}
+      input#email.form-control(ng-model="email", type='email', placeholder='Email', required)
      .form-group
        label(for='username') Username:
        input#username.form-control(ng-model="username", type='text', placeholder='Username', required)
